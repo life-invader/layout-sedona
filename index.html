@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -30,20 +31,20 @@
 
       <ul class="menu-user">
         <li class="menu-user-item">
-          <a class="menu-user-link" href="#">
+          <a class="menu-user-link user-search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
 
         <li class="menu-user-item">
-          <a class="menu-user-link" href="#">
+          <a class="menu-user-link user-favorite" href="#">
             <span class="visually-hidden">Добавить в избранное</span>
             <span>12</span>
           </a>
         </li>
 
         <li class="menu-user-item">
-          <a class="menu-user-link" href="#">Хочу сюда!</a>
+          <a class="want-here button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -66,14 +67,14 @@
 
       <ol class="advantages-list">
         <li class="advantages-item">
-          <div class="advantages-card advantages-card-primary">
+          <div class="advantages-card card-hard-blue">
             <h3 class="advantages-card-title">Настоящий городок</h3>
             <p class="advantages-card-number">— №1 —</p>
             <p class="advantages-card-desc">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <img src="images/sedona-motels.jpg" alt="Мотели в Седоне" width="800" height="384">
           <ul class="advantages-sublist">
-            <li class="advantages-card advantages-card-secondary">
+            <li class="advantages-card card-light-blue">
               <h4 class="advantages-card-title">Жильё</h4>
               <p class="advantages-card-desc">
                 Рекомендуем пожить в настоящем мотеле,
@@ -81,7 +82,7 @@
               </p>
             </li>
 
-            <li class="advantages-card advantages-card-secondary">
+            <li class="advantages-card">
               <h4 class="advantages-card-title">Еда</h4>
               <p class="advantages-card-desc">
                 Всегда заказывайте
@@ -89,7 +90,7 @@
               </p>
             </li>
 
-            <li class="advantages-card advantages-card-secondary">
+            <li class="advantages-card card-light-blue">
               <h4 class="advantages-card-title">Сувениры</h4>
               <p class="advantages-card-desc">
                 Не только китайского,
@@ -100,14 +101,14 @@
         </li>
 
         <li class="advantages-item">
-          <div class="advantages-card advantages-card-primary">
+          <div class="advantages-card card-hard-blue">
             <h3 class="advantages-card-title">Там есть мост дьявола</h3>
             <p class="advantages-card-number">— №2 —</p>
             <p class="advantages-card-desc">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </div>
           <img src="images/devils-bridge.jpg" alt="Мост Дьявола" width="800" height="384">
           <ul class="advantages-sublist">
-            <li class="advantages-card advantages-card-secondary">
+            <li class="advantages-card card-light-blue">
               <h4 class="advantages-card-title">Небольшая площадь</h4>
               <p class="advantages-card-number">— №3 —</p>
               <p class="advantages-card-desc">
@@ -115,7 +116,7 @@
               </p>
             </li>
 
-            <li class="advantages-card advantages-card-secondary">
+            <li class="advantages-card card-medium-blue">
               <h4 class="advantages-card-title">Красивая дорога</h4>
               <p class="advantages-card-number">— №4 —</p>
               <p class="advantages-card-desc">
@@ -123,7 +124,7 @@
               </p>
             </li>
 
-            <li class="advantages-card advantages-card-secondary">
+            <li class="advantages-card card-light-blue">
               <h4 class="advantages-card-title">Мало туристов</h4>
               <p class="advantages-card-number">— №5 —</p>
               <p class="advantages-card-desc">
@@ -141,7 +142,7 @@
       <p class="motels-text">
         Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
       </p>
-      <a class="motels-link" href="#">Поиск гостиницы в Седоне</a>
+      <a class="motels-link button" href="#">Поиск гостиницы в Седоне</a>
     </section>
   </main>
 
@@ -154,7 +155,7 @@
         <label class="visually-hidden" for="subscription-email">Email</label>
         <input class="subscription-field" type="email" name="subscription-email" id="subscription-email"
           placeholder="Ваш e-mail" required>
-        <button class="subscription-btn" type="submit">Подписаться</button>
+        <button class="subscription-btn button" type="submit">Подписаться</button>
       </form>
     </section>
 
@@ -178,7 +179,7 @@
           </a>
         </li>
       </ul>
-      <a href="tel:78128121212">+7 (812) 812-12-12</a>
+      <a class="footer-number" href="tel:78128121212">+7 (812) 812-12-12</a>
       <a class="page-footer-link" href="https://htmlacademy.ru/profile/heatonjs" target="_blank">
         <img class="page-footer-logo" src="images/icons/html-academy.svg" alt="Лого HTML Academy" width="115"
           height="33">

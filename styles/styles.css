@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/ptsans-400.woff2') format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../fonts/ptsans-700.woff2") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000;
+  background-color: #F2F2F2;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  border: none;
+}
+
+/* На будущее, когда будем убирать лишний текст */
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+/* Header */
+
+.page-header {
+  background-color: #fff;
+}
+
+.menu-list, .menu-user {
+  list-style: none;
+}
+
+.menu-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-link-active {
+  border-bottom: 2px solid #756257;
+}
+
+.want-here {
+  background-color: #756157;
+}
+
+/* welcome */
+
+.welcome {
+  background-image: url(../images/welcome-background.jpg);
+  background-repeat: no-repeat;
+}
+
+/* advantages */
+
+.advantages {
+  background-color: #fff;
+}
+
+.advantages-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.advantages-text {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-list, .advantages-sublist {
+  list-style: none;
+}
+
+.advantages-card {
+  text-align: center;
+}
+
+.advantages-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.advantages-card-desc {
+  color: #333333;
+}
+
+.card-hard-blue {
+  background-color: #82B3D3;
+  color: #fff;
+}
+
+.card-hard-blue .advantages-card-desc {
+  color: inherit;
+}
+
+.card-light-blue {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.card-medium-blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* motels */
+
+.motels {
+  text-align: center;
+  background-color: #fff;
+}
+
+.motels-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.motels-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.motels-link {
+  background-color: #756157;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+/* footer */
+/* footer - subscription */
+
+.subscription {
+  background-image: url(../images/subscribe-background.jpg);
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.subscription-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.subscription-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.subscription-btn {
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+/* footer - social */
+
+.footer-social {
+  background-color: #fff;
+}
+
+.footer-number {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+}
