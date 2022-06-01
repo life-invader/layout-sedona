@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -24,34 +25,35 @@
         </li>
 
         <li class="menu-item">
-          <a class="menu-link  menu-link-active" href="#">Гостиницы</a>
+          <a class="menu-link menu-link-active" href="#">Гостиницы</a>
         </li>
       </ul>
 
       <ul class="menu-user">
         <li class="menu-user-item">
-          <a class="menu-user-link" href="#">
+          <a class="menu-user-link user-search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
 
         <li class="menu-user-item">
-          <a class="menu-user-link" href="#">
+          <a class="menu-user-link user-favorite" href="#">
             <span class="visually-hidden">Добавить в избранное</span>
-            <span>12</span>
+            <span class="favorite-count">12</span>
           </a>
         </li>
 
         <li class="menu-user-item">
-          <a class="menu-user-link" href="#">Хочу сюда!</a>
+          <a class="want-here button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main class="catalog-main">
-    <header class="catalog-header">
-      <h1 class="catalog-header-title">Гостиницы Седоны</h1>
+    <header class="inner-header">
+      <h1 class="inner-header-title">Гостиницы Седоны</h1>
+
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">
@@ -62,6 +64,7 @@
           <a class="breadcrumbs-link breadcrumbs-link-active">Гостиницы</a>
         </li>
       </ul>
+
       <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="filter-group">
           <legend class="filter-group-title">Инфраструктура:</legend>
@@ -132,8 +135,8 @@
           <input type="range">
         </fieldset>
 
-        <button type="submit">Применить</button>
-        <button type="reset">Сбросить</button>
+        <button class="button submit-button" type="submit">Применить</button>
+        <button class="reset-button" type="reset">Сбросить</button>
       </form>
     </header>
 
@@ -178,8 +181,8 @@
             <p>От 4000 ₽</p>
           </div>
           <div class="motel-card-buttons">
-            <a class="motel-card-link" href="#">подробнее</a>
-            <a class="motel-card-link" href="#">в избранное</a>
+            <a class="more-button button" href="#">подробнее</a>
+            <a class="favorite-button button" href="#">в избранное</a>
           </div>
           <footer class="motel-card-footer">
             <div class="rating">
@@ -201,8 +204,8 @@
             <p>От 5000 ₽</p>
           </div>
           <div class="motel-card-buttons">
-            <a class="motel-card-link" href="#">подробнее</a>
-            <a class="motel-card-link" href="#">в избранное</a>
+            <a class="more-button button" href="#">подробнее</a>
+            <a class="favorite-added-button button" href="#">в избранном</a>
           </div>
           <footer class="motel-card-footer">
             <div class="rating">
@@ -224,8 +227,8 @@
             <p>От 2500 ₽</p>
           </div>
           <div class="motel-card-buttons">
-            <a class="motel-card-link" href="#">подробнее</a>
-            <a class="motel-card-link" href="#">в избранное</a>
+            <a class="more-button button" href="#">подробнее</a>
+            <a class="favorite-button button" href="#">в избранное</a>
           </div>
           <footer class="motel-card-footer">
             <div class="rating">
@@ -246,8 +249,8 @@
             <p>От 1500 ₽</p>
           </div>
           <div class="motel-card-buttons">
-            <a class="motel-card-link" href="#">подробнее</a>
-            <a class="motel-card-link" href="#">в избранное</a>
+            <a class="more-button button" href="#">подробнее</a>
+            <a class="favorite-button button" href="#">в избранное</a>
           </div>
           <footer class="motel-card-footer">
             <div class="rating">
@@ -287,7 +290,7 @@
         </ul>
 
         <p class="catalog-items-count">Гостиниц на странице:</p>
-        <select class="catalog-items-count" aria-label="Количество гостиниц на странице">
+        <select class="items-count-control" aria-label="Количество гостиниц на странице">
           <option value="four">4</option>
           <option value="six">6</option>
           <option value="six">10</option>
@@ -305,7 +308,7 @@
         <label class="visually-hidden" for="subscription-email">Email</label>
         <input class="subscription-field" type="email" name="subscription-email" id="subscription-email"
           placeholder="Ваш e-mail" required>
-        <button class="subscription-btn" type="submit">Подписаться</button>
+        <button class="subscription-button button" type="submit">Подписаться</button>
       </form>
     </section>
 
@@ -329,7 +332,7 @@
           </a>
         </li>
       </ul>
-      <a href="tel:78128121212">+7 (812) 812-12-12</a>
+      <a class="footer-number" href="tel:78128121212">+7 (812) 812-12-12</a>
       <a class="page-footer-link" href="https://htmlacademy.ru/profile/heatonjs" target="_blank">
         <img class="page-footer-logo" src="images/icons/html-academy.svg" alt="Лого HTML Academy" width="115"
           height="33">
