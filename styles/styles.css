@@ -40,8 +40,15 @@ body {
   border: none;
 }
 
-/* На будущее, когда будем убирать лишний текст */
-/* .visually-hidden {
+.title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -52,7 +59,7 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 /* Главная страница */
 /* Header */
@@ -94,19 +101,14 @@ body {
 .welcome {
   background-image: url(../images/welcome-background.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 
 /* advantages */
 
 .advantages {
   background-color: #fff;
-}
-
-.advantages-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  text-align: center;
 }
 
 .advantages-text {
@@ -127,6 +129,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .advantages-card-desc {
@@ -157,12 +160,6 @@ body {
   background-color: #fff;
 }
 
-.motels-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-}
-
 .motels-text {
   font-size: 22px;
   line-height: 26px;
@@ -183,12 +180,6 @@ body {
   text-align: center;
 }
 
-.subscription-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-}
-
 .subscription-text {
   font-size: 22px;
   line-height: 26px;
@@ -205,7 +196,9 @@ body {
 .subscription-mountain {
   background-image: url(../images/subscribe-background.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
+  text-align: center;
 }
 
 .subscription-mountain .subscription-text {
@@ -216,6 +209,10 @@ body {
 
 .footer-social {
   background-color: #fff;
+}
+
+.social-menu {
+  list-style: none;
 }
 
 .footer-number {
@@ -231,6 +228,7 @@ body {
 .inner-header {
   background-image: url(../images/catalog-header-background.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
 }
 
@@ -240,7 +238,12 @@ body {
   font-weight: 700;
 }
 
+.breadcrumbs {
+  list-style: none;
+}
+
 .breadcrumbs-link {
+  color: inherit;
   font-size: 16px;
   line-height: 21px;
 }
@@ -265,6 +268,7 @@ body {
   font-weight: 400;
   border: none;
   color: inherit;
+  background-color: transparent;
 }
 
 /* catalog */
