@@ -92,11 +92,23 @@ body {
   padding: 0 70px;
 }
 
+.menu-logo {
+  vertical-align: middle;
+  margin-bottom: -5px;
+}
+
 .menu-list, .menu-user {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.menu-list {
+  margin-left: 30px;
+  max-width: 480px;
 }
 
 .menu-user {
@@ -104,27 +116,67 @@ body {
 }
 
 .menu-link {
+  display: block;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #000;
   text-decoration: none;
+  padding: 20px 17px 22px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.4s;
+}
+
+.menu-link:hover {
+  border-color: #756257;
 }
 
 .menu-link-active {
   border-bottom: 2px solid #756257;
 }
 
-.want-here {
-  background-color: #756157;
+.user-search {
+  background-image: url(../images/icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 42px;
+  height: 70px;
+  display: block;
+}
+
+.user-favorite {
+  background-image: url(../images/icons/favorite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 42px;
+  height: 70px;
+  display: block;
+  position: relative;
 }
 
 .favorite-count {
+  position: absolute;
+  top: 15px;
+  left: 24px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
   background-color: #7DB54F;
   color: #fff;
   font-size: 10px;
-  line-height: 13px;
+  line-height: 20px;
   border-radius: 50%;
+}
+
+.want-here {
+  background-color: #756157;
+  padding: 9px 15px;
+  border-radius: 4px;
+  display: block;
+}
+
+.menu-user-item:last-child {
+  margin-left: 20px;
 }
 
 /* welcome */
@@ -205,6 +257,10 @@ body {
   background-color: #82B3D3;
   color: #fff;
   padding-top: 92px;
+}
+
+.card-hard-blue .advantages-card-title {
+  margin: 0;
 }
 
 .card-hard-blue .advantages-card-desc {
