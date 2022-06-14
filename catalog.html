@@ -139,8 +139,10 @@
             <input type="range">
           </fieldset>
 
-          <button class="button submit-button" type="submit">Применить</button>
-          <button class="reset-button" type="reset">Сбросить</button>
+          <div class="buttons-wrapper">
+            <button class="button submit-button" type="submit">Применить</button>
+            <button class="reset-button" type="reset">Сбросить</button>
+          </div>
         </form>
       </header>
 
@@ -293,12 +295,14 @@
             </li>
           </ul>
 
-          <p class="catalog-items-count">Гостиниц на странице:</p>
-          <select class="items-count-control" aria-label="Количество гостиниц на странице">
-            <option value="four">4</option>
-            <option value="six">6</option>
-            <option value="six">10</option>
-          </select>
+          <div class="pagination-select">
+            <p class="catalog-items-count">Гостиниц на странице:</p>
+            <select class="items-count-control" aria-label="Количество гостиниц на странице">
+              <option value="four">4</option>
+              <option value="six">6</option>
+              <option value="six">10</option>
+            </select>
+          </div>
         </footer>
       </section>
     </main>
