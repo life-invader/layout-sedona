@@ -44,6 +44,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   border: none;
+  cursor: pointer;
 }
 
 .title {
@@ -89,6 +90,7 @@ body {
 
 .menu {
   display: flex;
+  align-items: flex-start;
   padding: 0 70px;
 }
 
@@ -113,6 +115,7 @@ body {
 
 .menu-user {
   margin-left: auto;
+  max-width: 350px;
 }
 
 .menu-link {
@@ -296,8 +299,10 @@ body {
   line-height: 36px;
   font-weight: 700;
   width: 574px;
+  border-radius: 4px;
   display: inline-block;
   margin-top: 56px;
+  padding: 12px 15px;
 }
 
 /* footer */
@@ -317,20 +322,31 @@ body {
   margin: 29px auto 0;
 }
 
+.subscription-form {
+  margin-top: 46px;
+  display: flex;
+  justify-content: center;
+}
+
 .subscription-button {
   background-color: #82B3D3;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-}
-
-.subscription-form {
-  margin-top: 46px;
+  padding: 12px 15px;
+  width: 200px;
+  border-radius: 0 10px 10px 0;
 }
 
 .subscription-field {
-  display: inline-block;
   border: none;
+  width: 600px;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 20px 22px;
+  background-color: #F2F2F2;
 }
 
 .subscription-mountain {
@@ -350,14 +366,45 @@ body {
 .footer-social {
   background-color: #fff;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 44px 72px 35px;
 }
 
 .social-menu {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 200px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.social-link-vk {
+  display: block;
+  background-image: url('../images/icons/vk.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+}
+
+.social-link-tg {
+  display: block;
+  background-image: url('../images/icons/telegram.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+}
+
+.social-link-yt {
+  display: block;
+  background-image: url('../images/icons/youtube.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
 }
 
 .footer-number {
@@ -418,10 +465,19 @@ body {
 }
 
 .submit-button {
+  display: block;
   background-color: #82B3D3;
+  width: 160px;
+  padding: 14px 15px;
+  border-radius: 4px;
 }
 
 .reset-button {
+  display: block;
+  cursor: pointer;
+  width: 160px;
+  padding: 14px 15px;
+  margin-top: 6px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -445,7 +501,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  margin: 0 190px 0 0;
+  margin: 0;
 }
 
 .sort-control, .items-count-control {
@@ -453,13 +509,47 @@ body {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
+  margin-left: auto;
 }
 
 .toggle-view-buttons {
   list-style: none;
-  margin: 0 0 0 auto;
+  margin: 0 0 0 80px;
   padding: 0;
   display: flex;
+}
+
+.toggle-view-button {
+  width: 48px;
+  height: 48px;
+  border-color: #E5E5E5;
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.toggle-view-item+.toggle-view-item {
+  margin-left: 8px;
+}
+
+.table-button {
+  background-image: url('../images/icons/icon-table.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide-button {
+  background-image: url('../images/icons/icon-slideshow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list-button {
+  background-image: url('../images/icons/icon-list.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-list {
@@ -478,6 +568,10 @@ body {
   padding: 20px;
 }
 
+.motel-card-img {
+  vertical-align: middle;
+}
+
 .motel-card-title {
   font-size: 24px;
   line-height: 28px;
@@ -489,12 +583,25 @@ body {
 .motel-card-info {
   margin: 16px 0 0;
   display: flex;
+  column-gap: 20px;
+}
+
+.motel-card-info p {
+  width: 50%;
+  margin: 0;
 }
 
 .motel-card-buttons {
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
+}
+
+.motel-card-buttons a {
+  width: 140px;
+  text-align: center;
+  padding: 9px 15px;
+  border-radius: 4px;
 }
 
 .more-button {
@@ -512,6 +619,7 @@ body {
 .motel-card-footer {
   margin-top: 16px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -527,10 +635,16 @@ body {
   background-size: contain;
 }
 
+.star+.star {
+  margin-left: 6px;
+}
+
 .rating-total {
   font-size: 16px;
+  border-radius: 4px;
   line-height: 20px;
   background-color: #F2F2F2;
+  padding: 9px 22px;
 }
 
 /* catalog - footer */
