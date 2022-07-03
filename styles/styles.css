@@ -86,6 +86,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 20%);
 }
 
 .main {
@@ -314,7 +315,7 @@ input::-webkit-inner-spin-button {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 30px 0 0;
+  margin: 26px 0 0;
 }
 
 .advantages-card-number {
@@ -323,7 +324,7 @@ input::-webkit-inner-spin-button {
 
 .advantages-card-desc {
   color: #333333;
-  margin: 30px 0 0;
+  margin: 29px 0 0;
 }
 
 .card-hard-blue {
@@ -471,7 +472,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 44px 72px 35px;
+  padding: 39px 72px 35px;
 }
 
 .social-menu {
@@ -486,7 +487,6 @@ input::-webkit-inner-spin-button {
 .social-menu-link {
   width: 48px;
   height: 48px;
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -559,7 +559,7 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 35px 70px 70px;
+  padding: 35px 70px 62px;
 }
 
 .inner-header-title {
@@ -572,7 +572,7 @@ input::-webkit-inner-spin-button {
 .breadcrumbs {
   max-width: 300px;
   list-style: none;
-  margin: 10px 0 0;
+  margin: 9px 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -639,7 +639,7 @@ input::-webkit-inner-spin-button {
 }
 
 .group-housing {
-  margin-left: 70px;
+  margin-left: 71px;
 }
 
 .group-price {
@@ -650,6 +650,7 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  padding: 0;
 }
 
 .filter-group-list {
@@ -659,7 +660,7 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-group-item {
-  margin-top: 16px;
+  margin-top: 15px;
 }
 
 .filter-group-price {
@@ -728,7 +729,7 @@ input::-webkit-inner-spin-button {
 
 /* ============================================================= */
 .group-price-input {
-  padding: 12px 19px 11px;
+  padding: 12px 16px 11px;
   width: 144px;
   font-size: 18px;
   line-height: 21px;
@@ -755,7 +756,7 @@ input::-webkit-inner-spin-button {
 
 .price-input-text {
   position: absolute;
-  right: 15px;
+  right: 16px;
   bottom: 15px;
   opacity: 0.3;
 }
@@ -819,7 +820,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 60px 0 0 70px;
+  margin: 60px 0 0 71px;
 }
 
 .submit-button {
@@ -834,7 +835,7 @@ input::-webkit-inner-spin-button {
   display: block;
   width: 100px;
   cursor: pointer;
-  margin-top: 16px;
+  margin-top: 14px;
   padding: 4px;
   font-size: 16px;
   line-height: 20px;
@@ -917,7 +918,7 @@ input::-webkit-inner-spin-button {
 
 .toggle-view-buttons {
   list-style: none;
-  margin: 0 0 0 80px;
+  margin: 0 0 0 78px;
   padding: 0;
   display: flex;
 }
@@ -978,7 +979,7 @@ input::-webkit-inner-spin-button {
   padding: 0 0 66px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 340px);
-  grid-auto-rows: 440px;
+  grid-auto-rows: 438px;
   justify-content: center;
   column-gap: 18px;
   border-bottom: 1px solid #E6E6E6;
@@ -1005,11 +1006,11 @@ input::-webkit-inner-spin-button {
   line-height: 28px;
   font-weight: 700;
   color: #000;
-  margin: 16px 0 0;
+  margin: 17px 0 0;
 }
 
 .motel-card-info {
-  margin: 16px 0 0;
+  margin: 15px 0 0;
   display: flex;
   column-gap: 20px;
 }
@@ -1046,7 +1047,7 @@ input::-webkit-inner-spin-button {
 }
 
 .motel-card-footer {
-  margin-top: 16px;
+  margin-top: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1075,12 +1076,13 @@ input::-webkit-inner-spin-button {
   padding: 9px 22px;
   width: 140px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 /* catalog - footer */
 
 .catalog-footer {
-  padding: 30px 0 0;
+  padding: 29px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1143,10 +1145,10 @@ input::-webkit-inner-spin-button {
 /* modal */
 
 .modal-container {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
@@ -1160,6 +1162,7 @@ input::-webkit-inner-spin-button {
   padding: 62px 70px 70px;
   border-radius: 30px;
   background-color: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .modal-close-button {
@@ -1204,7 +1207,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.field-group+.field-group {
+.field-group~.field-group {
   margin-top: 11px;
 }
 
@@ -1230,14 +1233,160 @@ input::-webkit-inner-spin-button {
   background-position: right 19px center;
 }
 
+.field-people-group {
+  margin-top: 11px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-adults,
+.group-kids {
+  display: flex;
+  align-items: center;
+}
+
+.group-adults .search-label {
+  margin-right: 64px;
+}
+
+.group-kids {
+  position: relative;
+}
+
+.tooltip {
+  margin-left: 7px;
+  margin-right: 18px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #83B3D3;
+  background-image: url(../images/icons/i-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.tooltip-text {
+  font-size: 16px;
+  margin: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  padding: 15px 18px 23px 22px;
+  background-color: #333333;
+  border-radius: 10px;
+  color: #fff;
+  width: 256px;
+  z-index: 2;
+}
+
+.tooltip-text::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  top: -5px;
+  left: 119px;
+  background-color: #333333;
+}
+
+.tooltip:hover .tooltip-text {
+  top: 41px;
+  left: -116px;
+}
+
+.input-wrapper {
+  display: flex;
+  margin: 0;
+  position: relative;
+}
+
 .adults-input,
 .kids-input {
   width: 133px;
+  background-image: none;
+  padding: 15px 50px 14px;
+  text-align: center;
+  outline: none;
+}
+
+.field-message {
+  width: 420px;
+  margin: 8px 0 0 auto;
+  font-size: 16px;
+}
+
+.field-error {
+  color: #FF5757;
+}
+
+.minus-button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #F2F2F2;
+  background-image: url(../images/icons/minus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .plus-button {
-  padding: 24px 19px 25px;
-  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #F2F2F2;
+  background-image: url(../images/icons/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.search-form-submit {
+  padding: 12px 26px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #83B3D3;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.search-form-submit:hover {
+  background-color: #68A2CA;
+}
+
+.search-form-submit:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.search-form-submit:active {
+  outline: none;
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hidden {
