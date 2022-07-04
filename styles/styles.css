@@ -591,8 +591,8 @@ input::-webkit-inner-spin-button {
 }
 
 .breadcrumbs-link:focus {
-  opacity: 1;
-  outline: none;
+  outline: 2px solid black;
+  outline-offset: 3px;
 }
 
 .breadcrumbs-item:not(:last-child) .breadcrumbs-link:active {
@@ -668,7 +668,6 @@ input::-webkit-inner-spin-button {
   margin-top: 34px;
 }
 
-/* ============================================================= */
 .filter-label {
   display: block;
   position: relative;
@@ -690,7 +689,7 @@ input::-webkit-inner-spin-button {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.filter-label:focus .control-mark {
+.filter-input:focus+.control-mark {
   outline: 3px solid #83B3D3;
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -1231,6 +1230,24 @@ input::-webkit-inner-spin-button {
   background-image: url(../images/icons/calendar.svg);
   background-repeat: no-repeat;
   background-position: right 19px center;
+  transition: background 0.3s;
+}
+
+.search-input::placeholder {
+  opacity: 0.6;
+  color: #000;
+}
+
+.search-input:hover {
+  background-color: #E6E6E6;
+}
+
+.search-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.search-input:active {
+  outline: 3px solid #000;
 }
 
 .field-people-group {
