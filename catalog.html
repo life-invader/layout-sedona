@@ -409,8 +409,118 @@
         </a>
       </section>
     </footer>
-
   </div>
+
+  <div class="modal-container hidden">
+    <div class="modal modal-search">
+      <h2 class="title modal-title">Поиск гостиницы в Седоне</h2>
+      <button class="modal-close-button ">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+
+      <form class="search-form">
+        <div class="field-group">
+          <label class="search-label" for="in-date">Дата Заезда:</label>
+          <input class="search-input" type="text" id="in-date" name="in-date" value="27 апреля 2020"
+            placeholder="Укажите дату" required>
+        </div>
+        <p class="field-message field-error">Мы не можем отправить вас в прошлое.</p>
+
+        <div class="field-group">
+          <label class="search-label" for="out-date">Дата Выезда:</label>
+          <input class="search-input" type="text" id="out-date" name="out-date" value="1 сентября 2021"
+            placeholder="Укажите дату" required>
+        </div>
+        <p class="field-message">На эти даты есть свободные номера. Пока есть.</p>
+
+        <div class="field-people-group">
+          <div class="group-adults">
+            <label class="search-label" for="adults">Взрослые:</label>
+            <p class="input-wrapper">
+              <button class="minus-button" type="button">
+                <span class="visually-hidden">Уменьшить количество взрослых</span>
+              </button>
+              <input class="search-input adults-input" type="number" id="adults" name="adults" value="2" required>
+              <button class="plus-button" type="button">
+                <span class="visually-hidden">Увеличить количество взрослых</span>
+              </button>
+            </p>
+          </div>
+
+          <div class="group-kids">
+            <label class="search-label" for="kids">Дети:</label>
+            <div class="tooltip">
+              <p class="tooltip-text">
+                Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.
+              </p>
+            </div>
+            <p class="input-wrapper">
+              <button class="minus-button" type="button">
+                <span class="visually-hidden">Уменьшить количество детей</span>
+              </button>
+              <input class="search-input kids-input" type="number" id="kids" name="kids" value="1" required>
+              <button class="plus-button" type="button">
+                <span class="visually-hidden">Увеличить количество детей</span>
+              </button>
+            </p>
+          </div>
+        </div>
+
+        <button class="search-form-submit" type="submit">Найти</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.querySelector('.modal-container');
+    const form = document.querySelector('.search-form');
+    const submitButton = document.querySelector('.search-form-submit');
+    const openButton = document.querySelector('.want-here');
+    const closeButton = document.querySelector('.modal-close-button');
+
+    const minusButtons = document.querySelectorAll('.minus-button');
+    const plusButtons = document.querySelectorAll('.plus-button');
+
+
+    openButton.addEventListener('click', () => {
+      modal.classList.remove('hidden')
+    })
+
+    closeButton.addEventListener('click', () => {
+      modal.classList.add('hidden')
+    })
+
+    form.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+      submitButton.textContent = 'ИЩЕМ...';
+      setTimeout(() => {
+        submitButton.textContent = 'НАЙТИ';
+      }, 1500)
+    })
+
+    minusButtons.forEach((btn) => {
+      btn.addEventListener('click', (evt) => {
+        const input = evt.target.nextElementSibling
+        if (input.value === '1') {
+          return;
+        }
+
+        input.stepDown();
+      })
+    })
+
+    plusButtons.forEach((btn) => {
+      btn.addEventListener('click', (evt) => {
+        const input = evt.target.previousElementSibling
+        input.stepUp();
+      })
+    })
+
+    console.log(form['in-date'].value)
+    console.log(form['out-date'].value)
+  </script>
+
 </body>
 
 </html>
