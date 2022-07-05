@@ -238,6 +238,7 @@
       <h2 class="title modal-title">Поиск гостиницы в Седоне</h2>
       <button class="modal-close-button ">
         <span class="visually-hidden">Закрыть окно</span>
+        <span class="cross"></span>
       </button>
 
       <form class="search-form">
@@ -259,12 +260,14 @@
           <div class="group-adults">
             <label class="search-label" for="adults">Взрослые:</label>
             <p class="input-wrapper">
+              <input class="search-input adults-input" type="number" id="adults" name="adults" value="2" required>
               <button class="minus-button" type="button">
                 <span class="visually-hidden">Уменьшить количество взрослых</span>
+                <span class="sign"></span>
               </button>
-              <input class="search-input adults-input" type="number" id="adults" name="adults" value="2" required>
               <button class="plus-button" type="button">
                 <span class="visually-hidden">Увеличить количество взрослых</span>
+                <span class="sign"></span>
               </button>
             </p>
           </div>
@@ -278,12 +281,14 @@
               </p>
             </div>
             <p class="input-wrapper">
+              <input class="search-input kids-input" type="number" id="kids" name="kids" value="1" required>
               <button class="minus-button" type="button">
                 <span class="visually-hidden">Уменьшить количество детей</span>
+                <span class="sign"></span>
               </button>
-              <input class="search-input kids-input" type="number" id="kids" name="kids" value="1" required>
               <button class="plus-button" type="button">
                 <span class="visually-hidden">Увеличить количество детей</span>
+                <span class="sign"></span>
               </button>
             </p>
           </div>
@@ -301,8 +306,7 @@
     const openButton = document.querySelector('.want-here');
     const closeButton = document.querySelector('.modal-close-button');
 
-    const minusButtons = document.querySelectorAll('.minus-button');
-    const plusButtons = document.querySelectorAll('.plus-button');
+    const smallForms = document.querySelectorAll('.input-wrapper');
 
 
     openButton.addEventListener('click', () => {
@@ -321,21 +325,23 @@
       }, 1500)
     })
 
-    minusButtons.forEach((btn) => {
-      btn.addEventListener('click', (evt) => {
-        const input = evt.target.nextElementSibling
-        if (input.value === '1') {
-          return;
+    smallForms.forEach((form) => {
+      form.addEventListener('click', (evt) => {
+        const input = form.querySelector('.search-input');
+        const minus = form.querySelector('.minus-button');
+        const plus = form.querySelector('.plus-button');
+
+        if (evt.path.includes(minus)) {
+          if (input.value === '1') {
+            return;
+          }
+
+          input.stepDown();
         }
 
-        input.stepDown();
-      })
-    })
-
-    plusButtons.forEach((btn) => {
-      btn.addEventListener('click', (evt) => {
-        const input = evt.target.previousElementSibling
-        input.stepUp();
+        if (evt.path.includes(plus)) {
+          input.stepUp();
+        }
       })
     })
 
