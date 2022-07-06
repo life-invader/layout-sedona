@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/styles.css">
   <title>HTML Academy: Седона</title>
 </head>
@@ -135,14 +136,12 @@
                 <label class="visually-hidden" for="price-from">Стоимость от:</label>
                 <input class="group-price-input" type="number" id="price-from" name="price-from" value="0"
                   placeholder="0">
-                <span class="price-input-text">от</span>
               </div>
 
               <div class="price-field-to">
                 <label class="visually-hidden" for="price-to">Стоимость до:</label>
                 <input class="group-price-input" type="number" id="price-to" name="price-to" value="9000"
                   placeholder="9000">
-                <span class="price-input-text">до</span>
               </div>
             </div>
 
@@ -417,9 +416,10 @@
       <h2 class="title modal-title">Поиск гостиницы в Седоне</h2>
       <button class="modal-close-button ">
         <span class="visually-hidden">Закрыть окно</span>
+        <span class="cross"></span>
       </button>
 
-      <form class="search-form">
+      <form method="post" action=" https://echo.htmlacademy.ru" class="search-form">
         <div class="field-group">
           <label class="search-label" for="in-date">Дата Заезда:</label>
           <input class="search-input" type="text" id="in-date" name="in-date" value="27 апреля 2020"
@@ -438,12 +438,14 @@
           <div class="group-adults">
             <label class="search-label" for="adults">Взрослые:</label>
             <p class="input-wrapper">
+              <input class="search-input adults-input" type="number" id="adults" name="adults" value="2" required>
               <button class="minus-button" type="button">
                 <span class="visually-hidden">Уменьшить количество взрослых</span>
+                <span class="sign"></span>
               </button>
-              <input class="search-input adults-input" type="number" id="adults" name="adults" value="2" required>
               <button class="plus-button" type="button">
                 <span class="visually-hidden">Увеличить количество взрослых</span>
+                <span class="sign"></span>
               </button>
             </p>
           </div>
@@ -457,12 +459,14 @@
               </p>
             </div>
             <p class="input-wrapper">
+              <input class="search-input kids-input" type="number" id="kids" name="kids" value="1" required>
               <button class="minus-button" type="button">
                 <span class="visually-hidden">Уменьшить количество детей</span>
+                <span class="sign"></span>
               </button>
-              <input class="search-input kids-input" type="number" id="kids" name="kids" value="1" required>
               <button class="plus-button" type="button">
                 <span class="visually-hidden">Увеличить количество детей</span>
+                <span class="sign"></span>
               </button>
             </p>
           </div>
@@ -475,13 +479,9 @@
 
   <script>
     const modal = document.querySelector('.modal-container');
-    const form = document.querySelector('.search-form');
-    const submitButton = document.querySelector('.search-form-submit');
     const openButton = document.querySelector('.want-here');
     const closeButton = document.querySelector('.modal-close-button');
-
-    const minusButtons = document.querySelectorAll('.minus-button');
-    const plusButtons = document.querySelectorAll('.plus-button');
+    const smallForms = document.querySelectorAll('.input-wrapper');
 
 
     openButton.addEventListener('click', () => {
@@ -492,34 +492,26 @@
       modal.classList.add('hidden')
     })
 
-    form.addEventListener('submit', (evt) => {
-      evt.preventDefault();
-      submitButton.textContent = 'ИЩЕМ...';
-      setTimeout(() => {
-        submitButton.textContent = 'НАЙТИ';
-      }, 1500)
-    })
+    smallForms.forEach((form) => {
+      form.addEventListener('click', (evt) => {
+        const input = form.querySelector('.search-input');
+        const minus = form.querySelector('.minus-button');
+        const plus = form.querySelector('.plus-button');
 
-    minusButtons.forEach((btn) => {
-      btn.addEventListener('click', (evt) => {
-        const input = evt.target.nextElementSibling
-        if (input.value === '1') {
-          return;
+        if (evt.path.includes(minus)) {
+          if (input.value === '1') {
+            return;
+          }
+
+          input.stepDown();
         }
 
-        input.stepDown();
+        if (evt.path.includes(plus)) {
+          input.stepUp();
+        }
       })
     })
 
-    plusButtons.forEach((btn) => {
-      btn.addEventListener('click', (evt) => {
-        const input = evt.target.previousElementSibling
-        input.stepUp();
-      })
-    })
-
-    console.log(form['in-date'].value)
-    console.log(form['out-date'].value)
   </script>
 
 </body>
