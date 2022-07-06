@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="stylesheet" href="styles/styles.css">
   <title>HTML Academy: Седона</title>
 </head>
@@ -242,7 +242,7 @@
         <span class="cross"></span>
       </button>
 
-      <form class="search-form">
+      <form method="post" action=" https://echo.htmlacademy.ru" class="search-form">
         <div class="field-group">
           <label class="search-label" for="in-date">Дата Заезда:</label>
           <input class="search-input" type="text" id="in-date" name="in-date" value="27 апреля 2020"
@@ -302,11 +302,8 @@
 
   <script>
     const modal = document.querySelector('.modal-container');
-    const form = document.querySelector('.search-form');
-    const submitButton = document.querySelector('.search-form-submit');
     const openButton = document.querySelector('.want-here');
     const closeButton = document.querySelector('.modal-close-button');
-
     const smallForms = document.querySelectorAll('.input-wrapper');
 
 
@@ -316,14 +313,6 @@
 
     closeButton.addEventListener('click', () => {
       modal.classList.add('hidden')
-    })
-
-    form.addEventListener('submit', (evt) => {
-      evt.preventDefault();
-      submitButton.textContent = 'ИЩЕМ...';
-      setTimeout(() => {
-        submitButton.textContent = 'НАЙТИ';
-      }, 1500)
     })
 
     smallForms.forEach((form) => {
@@ -346,8 +335,6 @@
       })
     })
 
-    console.log(form['in-date'].value)
-    console.log(form['out-date'].value)
   </script>
 
 </body>

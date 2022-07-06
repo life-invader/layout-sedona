@@ -533,6 +533,12 @@ input::-webkit-inner-spin-button {
   fill: #000000;
 }
 
+.page-footer-logo,
+.footer-number {
+  outline: none;
+  transition: all 0.3s;
+}
+
 .page-footer-link:hover .page-footer-logo {
   fill: #756157;
 }
@@ -543,12 +549,6 @@ input::-webkit-inner-spin-button {
 
 .page-footer-link:active .page-footer-logo {
   fill: rgba(117, 97, 87, 0.3);
-}
-
-.page-footer-logo,
-.footer-number {
-  outline: none;
-  transition: all 0.3s;
 }
 
 /* Страница каталога */
