@@ -353,7 +353,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   width: 400px;
   min-height: 384px;
-  padding: 80px 85px 0;
+  padding: 80px 85px 15px;
 }
 
 .advantages-card-title {
@@ -640,7 +640,7 @@ input::-webkit-inner-spin-button {
 }
 
 .breadcrumbs {
-  max-width: 300px;
+  max-width: 800px;
   list-style: none;
   margin: 9px 0 0;
   padding: 0;
@@ -839,20 +839,21 @@ input::-webkit-inner-spin-button {
   border-radius: 0 4px 4px 0;
 }
 
-.price-input-text {
+.price-field-from::after {
+  content: 'от';
   position: absolute;
   right: 16px;
   bottom: 15px;
   opacity: 0.3;
 }
 
-/* .price-field-to::after {
+.price-field-to::after {
   content: 'до';
   position: absolute;
   right: 16px;
   bottom: 15px;
   opacity: 0.3;
-} */
+}
 
 .group-price-input:hover {
   border-color: rgba(255, 255, 255, 0.3);
@@ -1034,6 +1035,10 @@ input::-webkit-inner-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 300px;
 }
 
 .toggle-view-button {
@@ -1064,10 +1069,6 @@ input::-webkit-inner-spin-button {
 
 .toggle-view-button:active {
   border-color: #000;
-}
-
-.toggle-view-item+.toggle-view-item {
-  margin-left: 8px;
 }
 
 .table-button {
