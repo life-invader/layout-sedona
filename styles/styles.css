@@ -41,6 +41,10 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .button {
   color: #ffffff;
   text-decoration: none;
@@ -52,7 +56,6 @@ input::-webkit-inner-spin-button {
   border: none;
   cursor: pointer;
   transition: all 0.3s;
-  outline: none;
 }
 
 .title {
@@ -212,7 +215,6 @@ input::-webkit-inner-spin-button {
   width: 160px;
   text-align: center;
   transition: all 0.3s;
-  outline: none;
 }
 
 .motels-link {
@@ -313,6 +315,12 @@ input::-webkit-inner-spin-button {
 .advantages-item {
   display: flex;
   flex-wrap: wrap;
+}
+
+.advantages-img {
+  vertical-align: middle;
+  height: 100%;
+  object-fit: cover;
 }
 
 .advantages-card {
@@ -439,16 +447,10 @@ input::-webkit-inner-spin-button {
   border: none;
   width: 600px;
   border-radius: 10px 0 0 10px;
-  outline: none;
   font-size: 18px;
   line-height: 21px;
   padding: 20px 22px;
   background-color: #f2f2f2;
-}
-
-.subscription-field:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #000000;
 }
 
 .subscription-mountain {
@@ -501,7 +503,6 @@ input::-webkit-inner-spin-button {
 
 .social-menu-link:focus {
   fill: #68a2ca;
-  outline: none;
 }
 
 .social-menu-link:active {
@@ -529,13 +530,11 @@ input::-webkit-inner-spin-button {
 }
 
 .page-footer-link {
-  outline: none;
   fill: #000000;
 }
 
 .page-footer-logo,
 .footer-number {
-  outline: none;
   transition: all 0.3s;
 }
 
@@ -559,7 +558,7 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
-  padding: 35px 70px 62px;
+  padding: 35px 70px 55px;
 }
 
 .inner-header-title {
@@ -841,31 +840,41 @@ input::-webkit-inner-spin-button {
 
 .reset-button {
   display: block;
-  width: 100px;
+  width: 160px;
   cursor: pointer;
-  margin-top: 14px;
-  padding: 4px;
+  margin-top: 7px;
+  padding: 14px 15px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  border: 3px solid transparent;
+  border: none;
+  outline: none;
   border-radius: 4px;
   color: inherit;
   background-color: transparent;
-  outline: none;
   transition: all 0.3s;
+}
+
+.reset-button span {
+  padding: 6px 9px;
+  border: 3px solid transparent;
+  border-radius: 4px;
 }
 
 .reset-button:hover {
   opacity: 0.6;
 }
 
-.reset-button:focus {
+.reset-button:focus span {
   border-color: #83b3d3;
 }
 
 .reset-button:active {
   opacity: 0.3;
+  border-color: transparent;
+}
+
+.reset-button:active span {
   border-color: transparent;
 }
 
@@ -1131,7 +1140,6 @@ input::-webkit-inner-spin-button {
   min-height: 60px;
   justify-content: center;
   align-items: center;
-  outline: none;
   transition: all 0.3s;
 }
 
